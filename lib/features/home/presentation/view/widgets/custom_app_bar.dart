@@ -9,7 +9,8 @@ class CustomAppBar extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: purpleBlueColor,
-        borderRadius: BorderRadius.circular(20.0), // Set your desired border radius here
+        borderRadius:
+            BorderRadius.circular(20.0), // Set your desired border radius here
       ),
       child: Padding(
         padding: const EdgeInsetsDirectional.only(
@@ -18,11 +19,9 @@ class CustomAppBar extends StatelessWidget {
           end: 10,
         ),
         child: Column(
-          children:
-          [
+          children: [
             const Row(
-              children:
-              [
+              children: [
                 SizedBox(
                   height: 75,
                 ),
@@ -42,7 +41,7 @@ class CustomAppBar extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 70,
+                  width: 68,
                 ),
                 Icon(
                   Icons.language,
@@ -52,8 +51,7 @@ class CustomAppBar extends StatelessWidget {
               ],
             ),
             Row(
-              children:
-              [
+              children: [
                 const SizedBox(
                   width: 14,
                 ),
@@ -65,12 +63,13 @@ class CustomAppBar extends StatelessWidget {
                       start: 13.0,
                     ),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25.0,),
+                      borderRadius: BorderRadius.circular(
+                        25.0,
+                      ),
                       color: whiteColor,
                     ),
                     child: Row(
-                      children:
-                      [
+                      children: [
                         const Icon(
                           Icons.search,
                           color: Colors.grey,
