@@ -9,7 +9,8 @@ class ChatCustomAppBar extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: purpleBlueColor,
-        borderRadius: BorderRadius.circular(20.0), // Set your desired border radius here
+        borderRadius:
+            BorderRadius.circular(20.0), // Set your desired border radius here
       ),
       child: const Padding(
         padding: EdgeInsetsDirectional.only(
@@ -18,8 +19,7 @@ class ChatCustomAppBar extends StatelessWidget {
           end: 10,
         ),
         child: Row(
-          children:
-          [
+          children: [
             SizedBox(
               height: 75,
             ),
@@ -29,7 +29,7 @@ class ChatCustomAppBar extends StatelessWidget {
               size: 30,
             ),
             SizedBox(
-              width: 70,
+              width: 68,
             ),
             Text(
               'Unheard Voices',
