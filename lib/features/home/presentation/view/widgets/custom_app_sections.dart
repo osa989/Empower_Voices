@@ -62,7 +62,7 @@ class CustomAppSections extends StatelessWidget {
                   name: "Conversation",
                 ),
                 _selectedExtras(
-                  image: "assets/Images/Learn2.png",
+                  image: "assets/Images/user2.png",
                   name: "Learning",
                 ),
                 _selectedExtras(

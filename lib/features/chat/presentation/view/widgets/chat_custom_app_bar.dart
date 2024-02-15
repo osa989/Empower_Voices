@@ -9,12 +9,12 @@ class ChatCustomAppBar extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: purpleBlueColor,
-        borderRadius:
-            BorderRadius.circular(20.0), // Set your desired border radius here
+        // borderRadius:
+        //     BorderRadius.circular(20.0), // Set your desired border radius here
       ),
       child: const Padding(
         padding: EdgeInsetsDirectional.only(
-          top: 28,
+          top: 10,
           start: 10,
           end: 10,
         ),

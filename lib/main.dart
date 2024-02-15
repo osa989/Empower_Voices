@@ -4,9 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unheard_voices/constants.dart';
 import 'package:unheard_voices/core/widgets/text_to_speech.dart';
-import 'package:unheard_voices/features/home/presentation/view/home_screen.dart';
 import 'package:unheard_voices/core/Cubit/bloc_observer.dart';
-import 'package:unheard_voices/features/splash/presentation/view/splash-screen.dart';
+import 'package:unheard_voices/features/splash/presentation/view/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +31,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor:
             whiteColor, // Set your desired background color here
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
