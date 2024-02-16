@@ -14,7 +14,7 @@ class ChatCustomAppBar extends StatelessWidget {
       ),
       child: const Padding(
         padding: EdgeInsetsDirectional.only(
-          top: 10,
+          // top: 10,
           start: 10,
           end: 10,
         ),

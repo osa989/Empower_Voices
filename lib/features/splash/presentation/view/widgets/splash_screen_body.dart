@@ -28,7 +28,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
     initSlidingTextAnimation();
     initSlidingImageAnimation();
 
-    // navigateToHome();
+    navigateToHome();
   }
 
 //make the controllers end and not taking any resources from the app

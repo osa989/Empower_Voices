@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:unheard_voices/constants.dart';
 
 class CustomAppSections extends StatelessWidget {
   const CustomAppSections({super.key});
-  Widget _selectedExtras({@required String? image, @required String? name}) {
+  Widget services({@required Icon? icon, @required String? name}) {
     return Container(
       decoration: BoxDecoration(
           color: purpleBlueColor,
@@ -12,18 +13,17 @@ class CustomAppSections extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            height: 65,
-            decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage(image!))),
+          SizedBox(
+            height: 30,
+            child: icon,
           ),
           const SizedBox(
-            height: 10,
+            height: 7,
           ),
           Text(
             name!,
             style: const TextStyle(
-                fontSize: 17, fontWeight: FontWeight.w500, color: whiteColor),
+                fontSize: 15, fontWeight: FontWeight.w500, color: whiteColor),
           ),
         ],
       ),
@@ -32,57 +32,29 @@ class CustomAppSections extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+    return SizedBox(
+      height: 250,
+      width: double.infinity,
+      child: GridView.count(
+        physics: const NeverScrollableScrollPhysics(),
+        crossAxisCount: 3,
+        crossAxisSpacing: 12,
+        childAspectRatio: 1.20,
         children: [
-          const Text(
-            'Sections :',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w500,
-              color: Colors.black,
-            ),
+          services(
+            icon: Icon(Icons.message_outlined, color: Colors.white),
+            name: "Chat",
           ),
-          const SizedBox(
-            height: 10,
+          services(
+            icon: Icon(Icons.favorite_rounded, color: Colors.white),
+            name: "Favorites",
           ),
-          Container(
-            height: 250,
-            child: GridView.count(
-              physics: NeverScrollableScrollPhysics(),
-              crossAxisCount: 2,
-              crossAxisSpacing: 12,
-              mainAxisSpacing: 8,
-              childAspectRatio: 1.40,
-              children: [
-                _selectedExtras(
-                  image: "assets/Images/chat.png",
-                  name: "Conversation",
-                ),
-                _selectedExtras(
-                  image: "assets/Images/user2.png",
-                  name: "Learning",
-                ),
-                _selectedExtras(
-                  image: "assets/Images/settings.png",
-                  name: "Settings",
-                ),
-                _selectedExtras(
-                  image: "assets/Images/user2.png",
-                  name: "Deaf Comunity",
-                ),
-              ],
+          services(
+            icon: Icon(
+              FontAwesomeIcons.hands,
+              color: Colors.white,
             ),
-          ),
-          Text(
-            'Learning :',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w500,
-              color: Colors.black,
-            ),
+            name: "Learn",
           ),
         ],
       ),
